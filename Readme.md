@@ -1,13 +1,13 @@
 # Curso Kubernets
 
-##Exemplo de criação de um POD dentro do Kubernets:
+## Exemplo de criação de um POD dentro do Kubernets:
 
-##Para Trabalhar com o kubernets local você não precisa instalar o kubernets completo basta apenas baixar o projeto minikube 
+## Para Trabalhar com o kubernets local você não precisa instalar o kubernets completo basta apenas baixar o projeto minikube 
 
 >https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 
-##Instalando Minikube
+## Instalando Minikube
 
 ```
 #Instalar virtualbox
@@ -17,7 +17,7 @@ curl -Lo minikube https://github.com/kubernetes/minikube/releases/download/v0.25
 
 ### Menor Objeto dentro do kubernets é um POD
 
-##Adicionando o minikube no cluster
+## Adicionando o minikube no cluster
 
 ```
 kubectl config use-context minikube
@@ -39,7 +39,7 @@ spec:
         - containerPort: 80
 ```
 
-##Agora para adicionar esse pod no Kubernets instale o kubctl: 
+## Agora para adicionar esse pod no Kubernets instale o kubctl: 
 
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/darwin/amd64/kubectl
@@ -50,31 +50,31 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
 
-##Adicionando um POD
+## Adicionando um POD
 
 ```
 kubectl create -f aplicacao.yaml
 ```
 
-##Recuperando os PODs
+## Recuperando os PODs
 
 ```
 kubectl get pods
 ```
 
-##Recuperando os PODs
+## Recuperando os PODs
 
 ```
 kubectl get pods
 ```
 
-##Deletando um POD
+## Deletando um POD
 
 ```
 kubectl delete pods aplicacao
 ```
 
-#Gerenciando pods
+# Gerenciando pods
 
 Para gerenciar os pods precisamos abstrair o POD e criar um objeto deployment
 
