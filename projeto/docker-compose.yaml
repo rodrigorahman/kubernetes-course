@@ -1,0 +1,15 @@
+version: "3.0"
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=loja
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - /Users/rodrigorahman/Documents/develop/Cursos/Kubernets/projeto/volume_mysql:/var/lib/mysql
+  web:
+    image: rodrigorahman/php-server-projeto
+    ports:
+      - 8080:80
+  
